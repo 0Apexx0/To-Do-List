@@ -5,12 +5,11 @@ var taskInput = document.getElementById("new-task"); // new-task
 var addButton = document.getElementsByTagName("a")[0];//first button
 var incompleteTasksHolder = document.getElementById("incomplete-tasks"); //incomplete-tasks
 var completedTasksHolder = document.getElementById("completed-tasks"); //completed-tasks
-var taskLeftPrint = document.getElementById("print"); //print the task left counts
+
 var allTask = document.getElementById("all-task"); //print total task counts
 var completeTask = document.getElementById("complete-task"); //print complete task counts
 var completeTaskCount = 0 ;
 var allTaskCount = 0 ;
-var taskLeft = 0 ;
 
 
 //New Task List item
@@ -63,7 +62,6 @@ var addTask = function() {
   taskInput.value = "";
 
   allTaskCount++;
-  taskLeft++;
   taskCount();
 }
 
@@ -103,7 +101,6 @@ var deleteTask = function () {
   	ul.removeChild(listItem);
   
     allTaskCount--;
-    taskLeft--;
     taskCount();
 }
 
@@ -118,7 +115,6 @@ var taskCompleted = function() {
    completeTaskCount++;
    
 
-   taskLeft--;
   taskCount();
 }
 
@@ -132,7 +128,6 @@ var taskIncomplete = function() {
   bindTaskEvents(listItem, taskCompleted);
   completeTaskCount--;
    
-  taskLeft++;
   taskCount();
   
 }
@@ -171,7 +166,6 @@ for (var i = 0; i < completedTasksHolder.children.length; i ++) {
 
 // print the tasks count details
 function taskCount(){
-    taskLeftPrint.innerText= taskLeft + ' Task Left ';
     allTask.innerText = allTaskCount;
     completeTask.innerText = completeTaskCount;
 
