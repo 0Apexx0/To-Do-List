@@ -5,4 +5,4 @@ A simple to list with basic features like add item delete item to the list, fetc
  I have uploaded wrong video in youtube link so the correct link is below:
 - youtube link : https://youtu.be/08qLl56RPys
 
-## https://0apexx0.github.io/to-do-list/
+## hosted link : https://0apexx0.github.io/to-do-list/
